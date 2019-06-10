@@ -15,7 +15,6 @@ public class RangeController {
     private final RangeServiceImpl rangeService;
 
     @GetMapping
-    //@Cacheable("cityTimeResult")
     public ResponseEntity<Set<String>> getNodes(@RequestParam String city, @RequestParam Integer time) {
         return ResponseEntity.ok(rangeService.findCities(city, time));
     }
