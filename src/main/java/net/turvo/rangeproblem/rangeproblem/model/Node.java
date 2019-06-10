@@ -1,4 +1,4 @@
-package net.turvo.rangeproblem.rangeproblem.domain;
+package net.turvo.rangeproblem.rangeproblem.model;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
