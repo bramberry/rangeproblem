@@ -13,3 +13,9 @@ services:
     container_name: "mongodb"
     ports:
       - 27017:27017
+
+# only for db init
+#  mongo_import:
+#    build: ./dump
+#    links:
+#      - mongodb

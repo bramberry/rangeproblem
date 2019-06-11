@@ -1,0 +1,118 @@
+[
+  {
+    "_id": {
+      "$oid": "5cfb77fbd35d4819b081cb78"
+    },
+    "city": "Vitsebsk",
+    "neighbors": [
+      {
+        "time": 210,
+        "name": "Minsk"
+      },
+      {
+        "time": 80,
+        "name": "Polask"
+      },
+      {
+        "time": 120,
+        "name": "Mogilev"
+      },
+      {
+        "time": 360,
+        "name": "Grodno"
+      },
+      {
+        "time": 65,
+        "name": "Orsha"
+      }
+    ],
+    "_class": "net.turvo.rangeproblem.rangeproblem.model.Node"
+  },
+  {
+    "_id": {
+      "$oid": "5cfb6fa8d35d483978a3c438"
+    },
+    "city": "Minsk",
+    "neighbors": [
+      {
+        "time": 210,
+        "name": "Vitsebsk"
+      },
+      {
+        "time": 190,
+        "name": "Brest"
+      },
+      {
+        "time": 160,
+        "name": "Mogilev"
+      },
+      {
+        "time": 165,
+        "name": "Grodno"
+      },
+      {
+        "time": 65,
+        "name": "Zgodino"
+      }
+    ],
+    "_class": "net.turvo.rangeproblem.rangeproblem.model.Node"
+  },
+  {
+    "_id": {
+      "$oid": "5cfb70a2d35d483978a3c439"
+    },
+    "city": "Grodno",
+    "neighbors": [
+      {
+        "time": 165,
+        "name": "Minsk"
+      },
+      {
+        "time": 113,
+        "name": "Lida"
+      },
+      {
+        "time": 128,
+        "name": "Brest"
+      },
+      {
+        "time": 360,
+        "name": "Vitsebsk"
+      },
+      {
+        "time": 98,
+        "name": "Bialystok"
+      }
+    ],
+    "_class": "net.turvo.rangeproblem.rangeproblem.model.Node"
+  },
+  {
+    "_id": {
+      "$oid": "5cfb7344d35d4802e0d8b525"
+    },
+    "city": "Mogilev",
+    "neighbors": [
+      {
+        "time": 160,
+        "name": "Minsk"
+      },
+      {
+        "time": 90,
+        "name": "Babruysk"
+      },
+      {
+        "time": 120,
+        "name": "Vitsebsk"
+      },
+      {
+        "time": 150,
+        "name": "Gomel"
+      },
+      {
+        "time": 65,
+        "name": "Horki"
+      }
+    ],
+    "_class": "net.turvo.rangeproblem.rangeproblem.model.Node"
+  }
+]

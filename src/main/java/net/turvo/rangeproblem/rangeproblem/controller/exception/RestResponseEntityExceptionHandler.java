@@ -8,8 +8,8 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 @ControllerAdvice
 public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
-    @ExceptionHandler(value = IllegalArgumentException.class)
 
+    @ExceptionHandler(value = IllegalArgumentException.class)
     public ResponseEntity<String> handleException(IllegalArgumentException exception) {
         return ResponseEntity.badRequest().body(exception.getMessage());
     }

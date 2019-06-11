@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.anyString;
 import org.mockito.*;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.when;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import static org.testng.AssertJUnit.assertEquals;
@@ -48,20 +48,6 @@ public class RangeproblemApplicationTests {
         Set<String> cities = rangeService.findCities(inputCity, inputTime);
 
         assertEquals(cities, expectedResult);
-    }
-
-    @Test(dataProvider = "input")
-    public void testFindCitiesWithCacheReturnOk(String inputCity, Integer inputTime, Set<String> expectedResult) {
-        Map<String, Node> nodeMap = getNodes();
-
-        for (String city : nodeMap.keySet()) {
-            when(nodeService.getByName(city)).thenReturn(nodeMap.get(city));
-        }
-
-        rangeService.findCities(inputCity, inputTime);
-        rangeService.findCities(inputCity, inputTime);
-
-        verify(nodeService, times(1)).getByName(inputCity);
     }
 
     @Test(expectedExceptions = IllegalArgumentException.class)

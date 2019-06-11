@@ -25,7 +25,7 @@ public class RangeServiceImpl implements RangeService {
 
         Node node = nodeService.getByName(city);
         if (node == null) {
-            throw new IllegalArgumentException("No such city");
+            throw new IllegalArgumentException("No such a city");
         }
 
         return getNodes(node, new HashSet<>(), time, 0);
