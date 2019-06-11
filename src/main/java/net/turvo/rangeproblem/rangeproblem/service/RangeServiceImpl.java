@@ -23,6 +23,9 @@ public class RangeServiceImpl implements RangeService {
     public Set<String> findCities(String city, Integer time) {
 
         Node node = nodeService.getByName(city);
+        if (node == null) {
+            throw new IllegalArgumentException("No such city");
+        }
 
         return getNodes(node, new ArrayList<>(), time, 0);
     }
