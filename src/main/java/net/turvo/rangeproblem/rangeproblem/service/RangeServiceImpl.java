@@ -9,7 +9,8 @@ import net.turvo.rangeproblem.rangeproblem.service.interfaces.RangeService;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Slf4j
 @Service
@@ -27,10 +28,10 @@ public class RangeServiceImpl implements RangeService {
             throw new IllegalArgumentException("No such city");
         }
 
-        return getNodes(node, new ArrayList<>(), time, 0);
+        return getNodes(node, new HashSet<>(), time, 0);
     }
 
-    private Set<String> getNodes(Node node, List<String> visited, Integer time, Integer currentTime) {
+    private Set<String> getNodes(Node node, Set<String> visited, Integer time, Integer currentTime) {
 
         Set<String> res = new HashSet<>();
 
@@ -46,7 +47,7 @@ public class RangeServiceImpl implements RangeService {
                 continue;
             }
 
-            res.addAll(getNodes(next, new ArrayList<>(visited), time, currentTime + neighbor.getTime()));
+            res.addAll(getNodes(next, new HashSet<>(visited), time, currentTime + neighbor.getTime()));
         }
         return res;
     }
