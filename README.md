@@ -54,9 +54,10 @@ each "branch" of DPS exceeds the given input commute time.
   GET http://localhost:8080/nodes
   
 3. Get reacheble cities
-  ### Request
-  GET http://localhost:8080/ranges?city=Vitsebsk&time=400
-  ### Responce
+   Request
+      GET http://localhost:8080/ranges?city=Vitsebsk&time=400
+      
+   Responce
   `[
     "Gomel",
     "Brest",
