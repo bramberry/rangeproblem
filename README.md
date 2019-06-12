@@ -1,4 +1,4 @@
-# Rangeproblem
+# Commute Range Problem
   The CEO of the small company that you work for has asked you to build a new feature which allows users of the
 app to determine the reachable towns/cities from a starting point in a given amount of time. For example, a user
 may pick the city of San Francisco, and a commute time of 60 minutes and the new feature should list the
@@ -10,11 +10,12 @@ city, city, city) ]
   - Store data using MongoDB
   - The traversal terminates early as the summation of the weights during
 each "branch" of DPS exceeds the given input commute time.
-  - Designed REST api for access data and query reacheble cities
+   - Designed REST API for access data and query reachable cities
+   - Caching the result of every calculation in Redis
   
 ## How to use
 
-  - Go to the root project directory
+  - Go to the project root directory
   - Run `docker-compose up`
   - Run `mvn spring-boot:run`
   
@@ -50,10 +51,10 @@ each "branch" of DPS exceeds the given input commute time.
             }
         ]
     }`
-2. Get all nodes
+2. Get all Nodes
   - GET http://localhost:8080/nodes
   
-3. Get reacheble cities
+3. Get reachable cities
    - Request
       GET http://localhost:8080/ranges?city=Vitsebsk&time=400
       
