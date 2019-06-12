@@ -19,8 +19,6 @@ each "branch" of DPS exceeds the given input commute time.
   - Run `docker-compose up`
   - Run `mvn spring-boot:run`
   
-### To init mongoDB data:
-  - Uncomment `mongo_import` block inside docker-compose.yaml file
 
 ## Example
 
