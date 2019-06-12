@@ -19,6 +19,13 @@ public class RangeServiceImpl implements RangeService {
 
     private final NodeService nodeService;
 
+    /**
+     * Searches for cities that can be reached
+     *
+     * @param city The name of city
+     * @param time Time to reach the city
+     * @return Set of cities
+     */
     @Override
     @Cacheable("city-time-result")
     public Set<String> findCities(String city, Integer time) {
@@ -28,6 +35,15 @@ public class RangeServiceImpl implements RangeService {
         return getNodes(node, new HashSet<>(), time, 0);
     }
 
+    /**
+     * A recursive function, that starts for each reachable neighbor
+     *
+     * @param node        current node
+     * @param visited     recently visited nodes
+     * @param time        max time to rich a city
+     * @param currentTime
+     * @return Set of cities
+     */
     private Set<String> getNodes(Node node, Set<String> visited, Integer time, Integer currentTime) {
 
         Set<String> res = new HashSet<>();
@@ -39,12 +55,9 @@ public class RangeServiceImpl implements RangeService {
                 continue;
             }
             res.add(neighbor.getName());
-            Node next = nodeService.getByName(neighbor.getName()).orElse(null);
-            if (next == null) {
-                continue;
-            }
+            nodeService.getByName(neighbor.getName()).ifPresent(next -> res.addAll(
+                    getNodes(next, new HashSet<>(visited), time, currentTime + neighbor.getTime())));
 
-            res.addAll(getNodes(next, new HashSet<>(visited), time, currentTime + neighbor.getTime()));
         }
         return res;
     }

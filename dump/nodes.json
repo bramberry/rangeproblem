@@ -1,35 +1,6 @@
 [
   {
     "_id": {
-      "$oid": "5cfb77fbd35d4819b081cb78"
-    },
-    "city": "Vitsebsk",
-    "neighbors": [
-      {
-        "time": 210,
-        "name": "Minsk"
-      },
-      {
-        "time": 80,
-        "name": "Polask"
-      },
-      {
-        "time": 120,
-        "name": "Mogilev"
-      },
-      {
-        "time": 360,
-        "name": "Grodno"
-      },
-      {
-        "time": 65,
-        "name": "Orsha"
-      }
-    ],
-    "_class": "net.turvo.rangeproblem.rangeproblem.model.Node"
-  },
-  {
-    "_id": {
       "$oid": "5cfb6fa8d35d483978a3c438"
     },
     "city": "Minsk",
@@ -111,6 +82,143 @@
       {
         "time": 65,
         "name": "Horki"
+      }
+    ],
+    "_class": "net.turvo.rangeproblem.rangeproblem.model.Node"
+  },
+  {
+    "_id": {
+      "$oid": "5cfb77fbd35d4819b081cb78"
+    },
+    "city": "Vitsebsk",
+    "neighbors": [
+      {
+        "time": 210,
+        "name": "Minsk"
+      },
+      {
+        "time": 80,
+        "name": "Polask"
+      },
+      {
+        "time": 120,
+        "name": "Mogilev"
+      },
+      {
+        "time": 360,
+        "name": "Grodno"
+      },
+      {
+        "time": 65,
+        "name": "Orsha"
+      }
+    ],
+    "_class": "net.turvo.rangeproblem.rangeproblem.model.Node"
+  },
+  {
+    "_id": {
+      "$oid": "5d00eb277448295b0459831a"
+    },
+    "city": "Polask",
+    "neighbors": [
+      {
+        "time": 80,
+        "name": "Vitsebsk"
+      }
+    ],
+    "_class": "net.turvo.rangeproblem.rangeproblem.model.Node"
+  },
+  {
+    "_id": {
+      "$oid": "5d00eb3d7448295b0459831b"
+    },
+    "city": "Orsha",
+    "neighbors": [
+      {
+        "time": 65,
+        "name": "Vitsebsk"
+      }
+    ],
+    "_class": "net.turvo.rangeproblem.rangeproblem.model.Node"
+  },
+  {
+    "_id": {
+      "$oid": "5d00eb7c7448295b0459831c"
+    },
+    "city": "Brest",
+    "neighbors": [
+      {
+        "time": 190,
+        "name": "Minsk"
+      },
+      {
+        "time": 128,
+        "name": "Grodno"
+      }
+    ],
+    "_class": "net.turvo.rangeproblem.rangeproblem.model.Node"
+  },
+  {
+    "_id": {
+      "$oid": "5d00ebb77448295b0459831d"
+    },
+    "city": "Zgodino",
+    "neighbors": [
+      {
+        "time": 65,
+        "name": "Minsk"
+      }
+    ],
+    "_class": "net.turvo.rangeproblem.rangeproblem.model.Node"
+  },
+  {
+    "_id": {
+      "$oid": "5d00ebd67448295b0459831e"
+    },
+    "city": "Lida",
+    "neighbors": [
+      {
+        "time": 113,
+        "name": "Grodno"
+      }
+    ],
+    "_class": "net.turvo.rangeproblem.rangeproblem.model.Node"
+  },
+  {
+    "_id": {
+      "$oid": "5d00ebe57448295b0459831f"
+    },
+    "city": "Bialystok",
+    "neighbors": [
+      {
+        "time": 98,
+        "name": "Grodno"
+      }
+    ],
+    "_class": "net.turvo.rangeproblem.rangeproblem.model.Node"
+  },
+  {
+    "_id": {
+      "$oid": "5d00ebfa7448295b04598320"
+    },
+    "city": "Horki",
+    "neighbors": [
+      {
+        "time": 65,
+        "name": "Mogilev"
+      }
+    ],
+    "_class": "net.turvo.rangeproblem.rangeproblem.model.Node"
+  },
+  {
+    "_id": {
+      "$oid": "5d00ec0e7448295b04598321"
+    },
+    "city": "Babruysk",
+    "neighbors": [
+      {
+        "time": 90,
+        "name": "Mogilev"
       }
     ],
     "_class": "net.turvo.rangeproblem.rangeproblem.model.Node"

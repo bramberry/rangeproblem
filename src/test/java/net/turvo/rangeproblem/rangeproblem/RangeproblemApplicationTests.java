@@ -52,7 +52,7 @@ public class RangeproblemApplicationTests {
 
     @Test(expectedExceptions = IllegalArgumentException.class)
     public void testFindCitiesInvalidCityNameReturnIllegalArgumentException() {
-        when(nodeService.getByName(anyString())).thenReturn(null);
+        when(nodeService.getByName(anyString())).thenThrow(new IllegalArgumentException());
 
         rangeService.findCities("Invalid City", anyInt());
 
