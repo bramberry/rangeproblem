@@ -24,7 +24,7 @@ each "branch" of DPS exceeds the given input commute time.
 ## Example
 
 1. Add new Node
-  POST http://localhost:8080/nodes
+  - POST http://localhost:8080/nodes
   `{
         "city": "Vitsebsk",
         "neighbors": [
@@ -51,13 +51,13 @@ each "branch" of DPS exceeds the given input commute time.
         ]
     }`
 2. Get all nodes
-  GET http://localhost:8080/nodes
+  - GET http://localhost:8080/nodes
   
 3. Get reacheble cities
-   Request
+   - Request
       GET http://localhost:8080/ranges?city=Vitsebsk&time=400
       
-   Responce
+   - Responce
   `[
     "Gomel",
     "Brest",
