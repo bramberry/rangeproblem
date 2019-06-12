@@ -2,7 +2,6 @@ package net.turvo.rangeproblem.rangeproblem.controller;
 
 import lombok.RequiredArgsConstructor;
 import net.turvo.rangeproblem.rangeproblem.service.RangeServiceImpl;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
@@ -15,8 +14,8 @@ public class RangeController {
     private final RangeServiceImpl rangeService;
 
     @GetMapping
-    public ResponseEntity<Set<String>> getNodes(@RequestParam String city, @RequestParam Integer time) {
-        return ResponseEntity.ok(rangeService.findCities(city, time));
+    public Set<String> getNodes(@RequestParam String city, @RequestParam Integer time) {
+        return rangeService.findCities(city, time);
     }
 
 

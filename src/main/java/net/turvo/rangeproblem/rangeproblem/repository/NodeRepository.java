@@ -4,7 +4,9 @@ import net.turvo.rangeproblem.rangeproblem.model.Node;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public interface NodeRepository extends MongoRepository<Node, String> {
-    Node findByCity(String city);
+    Optional<Node> findByCity(String city);
 }

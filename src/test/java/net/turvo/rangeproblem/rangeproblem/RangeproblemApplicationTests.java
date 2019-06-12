@@ -42,7 +42,7 @@ public class RangeproblemApplicationTests {
         Map<String, Node> nodeMap = getNodes();
 
         for (String city : nodeMap.keySet()) {
-            when(nodeService.getByName(city)).thenReturn(nodeMap.get(city));
+            when(nodeService.getByName(city)).thenReturn(java.util.Optional.ofNullable(nodeMap.get(city)));
         }
 
         Set<String> cities = rangeService.findCities(inputCity, inputTime);

@@ -22,11 +22,8 @@ public class RangeServiceImpl implements RangeService {
     @Override
     @Cacheable("city-time-result")
     public Set<String> findCities(String city, Integer time) {
-
-        Node node = nodeService.getByName(city);
-        if (node == null) {
-            throw new IllegalArgumentException("No such a city");
-        }
+        Node node = nodeService.getByName(city)
+                .orElseThrow(() -> new IllegalArgumentException("No such a city"));
 
         return getNodes(node, new HashSet<>(), time, 0);
     }
@@ -42,7 +39,7 @@ public class RangeServiceImpl implements RangeService {
                 continue;
             }
             res.add(neighbor.getName());
-            Node next = nodeService.getByName(neighbor.getName());
+            Node next = nodeService.getByName(neighbor.getName()).orElse(null);
             if (next == null) {
                 continue;
             }

@@ -8,6 +8,7 @@ import net.turvo.rangeproblem.rangeproblem.service.interfaces.NodeService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Slf4j
 @Service
@@ -22,7 +23,7 @@ public class NodeServiceImpl implements NodeService {
     }
 
     @Override
-    public Node getByName(String name) {
+    public Optional<Node> getByName(String name) {
         return nodeRepository.findByCity(name);
     }
 
@@ -31,8 +32,4 @@ public class NodeServiceImpl implements NodeService {
         return nodeRepository.save(node);
     }
 
-    @Override
-    public Node update(Node node) {
-        return node;
-    }
 }
